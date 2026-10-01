@@ -1,0 +1,10 @@
+services:
+  ticket-bot:
+    build: .
+    container_name: telegram_ticket_bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
